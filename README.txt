@@ -8,17 +8,67 @@ This text file describes brief but precise and complete specification of project
 - - -
 Your description start form next line and do not delete lines upto this point.
 
-owership 
+<프로젝트 요약>
 
-readme : 이찬영
-header : 
-main :
-library :
+ 1. 정수값을 입력 받는다(CTRL-Z 가 입력될 때까지 입력받음)
+ 2. 입력되는 정수값은 linked list를 구성 하면서 node에 저장
+ 3. 출력값 - 입력자료의 개수 출력 
+	   - 입력자료의 입력 역순 출력
+	   - 입력자료의 중간위치 값 출력
+	   - 입력자료를 입력순으로 출력
+	   - 입력자료에서 홀수번째 자료 삭제
+	   - 남은 자료를 순서대로 출력
 
-업무 분담
+< ownership >
 
-함수 설명
+readme - 이찬영
+header - 박소현
+main - 유승훈
+library - 김병주, 최승원
 
-팀 아이디어
+< fuction descriptions >
+
+name : createNode		
+input parameter : n
+output parameter : cur
+
+name : append
+input parameter : head, cur
+output parameter : head
+
+name : nodeNum
+input parameter : head
+output parameter : cnt
+
+name : reverse
+input parameter : head
+output parameter : void
+
+name : midNum
+input parameter : head
+output parameter : void
+
+name : print
+input parameter : head
+output parameter : void
+
+name : oddlt
+input parameter : head
+output parameter : head
 
 
+< Declaration of important data and data types in user header file>
+
+파일명 - header.h
+
+사용된 헤더파일 - <stdio.h>, <stdlib.h>, <string.h>
+
+데이터 형식 - struct linked_list
+
+구조체 안의 데이터 - int n, struct linked_list *next
+
+main에 사용할 함수 선언 - createNode, append, nodeNum, reverse, midNum, print, oddlt
+
+< Team's brief idea >
+
+- 

@@ -1,14 +1,13 @@
 #include "header.h"
 
-LINK createNode(int n)
+LINK createNode(int *value)
 {
-	LINK cur = (LINK)malloc(sizeof(NODE));
-	cur->n = n;
+	LINK cur;
+	cur = (LINK)malloc(sizeof(NODE));
+	cur->value = value;
 	cur->next = NULL;
-
 	return cur;
 }
-
 LINK append(LINK head, LINK cur)
 {
 	LINK nextNode = head;
@@ -39,11 +38,11 @@ int nodeNum(LINK head)
 
 void reverse(LINK head)
 {
-	printf("ì—­ìˆœì¶œë ¥:");
+	printf("¿ª¼øÃâ·Â:");
 	LINK a, b, c;
 	a = head;
 	b = NULL;
-	while (a!=NULL)
+	while (a != NULL)
 	{
 		c = b;
 		b = a;
@@ -88,24 +87,24 @@ void midNum(LINK head)
 	if (cnt % 2 == 0)
 	{
 		nextNode = head;
-		printf("\në…¸ë“œì˜ ê°œìˆ˜ëŠ” ì§ìˆ˜ì…ë‹ˆë‹¤ ë”°ë¼ì„œ ì¤‘ê°„ê°’ì€:");
+		printf("\n³ëµåÀÇ °³¼ö´Â Â¦¼öÀÔ´Ï´Ù µû¶ó¼­ Áß°£°ªÀº:");
 		for (int i = 0; i < cnt / 2; i++)
 		{
 			nextNode = nextNode->next;
 		}
 		printf("%d,", nextNode->value);
 		nextNode = nextNode->next;
-		printf("%d ì…ë‹ˆë‹¤.", nextNode->value);
+		printf("%d ÀÔ´Ï´Ù.", nextNode->value);
 	}
 	else
 	{
 		nextNode = head;
-		printf("\në…¸ë“œì˜ ê°œìˆ˜ëŠ” í™€ìˆ˜ì…ë‹ˆë‹¤ ë”°ë¼ì„œ ì¤‘ê°„ê°’ì€:");
+		printf("\n³ëµåÀÇ °³¼ö´Â È¦¼öÀÔ´Ï´Ù µû¶ó¼­ Áß°£°ªÀº:");
 		for (int i = 0; i < cnt / 2; i++)
 		{
 			nextNode = nextNode->next;
 		}
-		printf("%d ì…ë‹ˆë‹¤.", nextNode->value);
+		printf("%d ÀÔ´Ï´Ù.", nextNode->value);
 	}
 	printf("\n");
 }
@@ -122,26 +121,40 @@ void print(LINK head)
 }
 LINK odddlt(LINK head)
 {
-	printf("í™€ìˆ˜ë²ˆì§¸ ë…¸ë“œ ì‚­ì œ\n");
+	printf("È¦¼ö¹øÂ° ³ëµå »èÁ¦\n");
 	int i;
 	LINK temp;
 	LINK del;
 	int n = nodeNum(head);
-Â 
+
 	del = head;
 	head = head->next;
 	free(del);
-Â 
+
 	temp = head;
-	for (i = 1; i < n / 2; i++) {
-		if (temp->next != NULL){
-			del = temp->next;
-			temp->next = del->next;
-			free(del);
-			temp = temp->next;
-			printf("!\n");
+	if (n % 2 == 0)
+	{
+		for (i = 1; i < n / 2; i++) 
+		{
+			if (temp->next != NULL){
+				del = temp->next;
+				temp->next = del->next;
+				free(del);
+				temp = temp->next;
+			}
 		}
 	}
-	
+	else
+	{
+		for (i = 1; i < (n / 2)+1; i++)
+		{
+			if (temp->next != NULL){
+				del = temp->next;
+				temp->next = del->next;
+				free(del);
+				temp = temp->next;
+			}
+		}
+	}
 	return head;
 }

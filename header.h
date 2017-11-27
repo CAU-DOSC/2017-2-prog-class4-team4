@@ -8,11 +8,3 @@ typedef struct linked_list{
 	struct linked_list *next;
 }NODE;
 typedef NODE* LINK;
-
-LINK createNode(int *value);
-LINK append(LINK head, LINK cur);
-int nodeNum(LINK head);
-void reverse(LINK head)
-void midNum(LINK head);
-void print(LINK head);
-LINK odddlt(LINK head);
