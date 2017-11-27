@@ -25,8 +25,59 @@ readme - 이찬영
 header - 박소현
 main - 유승훈
 library - 김병주, 최승원
+<<<<<<< HEAD
 
 < fuction descriptions >
+=======
+
+< fuction descriptions >
+
+name : createNode		
+input parameter : n
+output parameter : cur
+
+name : append
+input parameter : head, cur
+output parameter : head
+
+name : nodeNum
+input parameter : head
+output parameter : cnt
+
+name : reverse
+input parameter : head
+output parameter : void
+
+name : midNum
+input parameter : head
+output parameter : void
+
+name : print
+input parameter : head
+output parameter : void
+
+name : oddlt
+input parameter : head
+output parameter : head
+
+
+< Declaration of important data and data types in user header file>
+
+파일명 - header.h
+
+사용된 헤더파일 - <stdio.h>, <stdlib.h>, <string.h>
+
+데이터 형식 - struct linked_list
+
+구조체 안의 데이터 - int n, struct linked_list *next
+
+main에 사용할 함수 선언 - createNode, append, nodeNum, reverse, midNum, print, oddlt
+
+< Team's brief idea >
+
+- 
+
+>>>>>>> origin/master
 
 name : createNode		
 input parameter : n
