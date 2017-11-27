@@ -38,7 +38,6 @@ int nodeNum(LINK head)
 
 void reverse(LINK head)
 {
-	printf("역순출력:");
 	LINK a, b, c;
 	a = head;
 	b = NULL;
@@ -60,7 +59,7 @@ void reverse(LINK head)
 	a = b;
 	while (b != NULL)
 	{
-		printf("%d", b->value);
+		printf("%d ", b->value);
 		b = b->next;
 	}
 	b = NULL;
@@ -87,24 +86,22 @@ void midNum(LINK head)
 	if (cnt % 2 == 0)
 	{
 		nextNode = head;
-		printf("\n노드의 개수는 짝수입니다 따라서 중간값은:");
-		for (int i = 0; i < cnt / 2; i++)
+		for (int i = 0; i < cnt / 2 -1; i++)
 		{
 			nextNode = nextNode->next;
 		}
 		printf("%d,", nextNode->value);
 		nextNode = nextNode->next;
-		printf("%d 입니다.", nextNode->value);
+		printf("%d", nextNode->value);
 	}
 	else
 	{
 		nextNode = head;
-		printf("\n노드의 개수는 홀수입니다 따라서 중간값은:");
 		for (int i = 0; i < cnt / 2; i++)
 		{
 			nextNode = nextNode->next;
 		}
-		printf("%d 입니다.", nextNode->value);
+		printf("%d", nextNode->value);
 	}
 	printf("\n");
 }
@@ -114,14 +111,13 @@ void print(LINK head)
 	LINK nextNode = head;
 	while (nextNode != NULL)
 	{
-		printf("%d", nextNode->value);
+		printf("%d ", nextNode->value);
 		nextNode = nextNode->next;
 	}
 	printf("\n");
 }
 LINK odddlt(LINK head)
 {
-	printf("홀수번째 노드 삭제\n");
 	int i;
 	LINK temp;
 	LINK del;
