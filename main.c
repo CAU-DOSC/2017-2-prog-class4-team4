@@ -27,8 +27,11 @@ int main()
 	}
 
 	printf("ÀÚ·áÀÇ °¹¼ö : %d\n", num);
-	printlist(head); printf("\n");
-	printback(head, num); printf("\n");
-	centerprint(head, num); printf("\n");
+	printlist(head); 
+	printf("\n");
+	printback(head, num); 
+	printf("\n");
+	centerprint(head, num); 
+	printf("\n");
 	removeodd(head, num);
 }
