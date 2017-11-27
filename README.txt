@@ -33,7 +33,7 @@ library - 김병주, 최승원
 < fuction descriptions >
 
 name : createNode		
-input parameter : n
+input parameter : value
 output parameter : cur
 
 name : append
@@ -80,7 +80,7 @@ main에 사용할 함수 선언 - createNode, append, nodeNum, reverse, midNum, print, o
 >>>>>>> origin/master
 
 name : createNode		
-input parameter : n
+input parameter : value
 output parameter : cur
 
 name : append
