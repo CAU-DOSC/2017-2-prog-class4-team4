@@ -1,4 +1,4 @@
-#include "linkedlist.h"
+#include "header.h"
 
 LINK createNode(int n)
 {
