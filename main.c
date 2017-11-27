@@ -1,29 +1,27 @@
-#include "header.h"
+#include"header.h"
 
 int main()
 {
-	int value = 0, num = 0;
-
+	int num;
 	LINK head = NULL;
 	LINK cur;
-	while (scanf_s("%d", &value) != EOF)
+
+	printf("정수를 입력하고 enter를 누르세요. >>\n");
+
+	while (scanf_s("%d", &num) != EOF)
 	{
-		cur = createNode(value);
-		if (cur == NULL)
-		{
-			printf("동적메모리할당에 문제가 있습니다.\n");
-			break;
-		}
+		cur = createNode(num);
 		head = append(head, cur);
-		num++;
 	}
 
-	printf("자료의 갯수 : %d\n", num);
-	printlist(head); 
-	printf("\n");
-	printback(head, num); 
-	printf("\n");
-	centerprint(head, num); 
-	printf("\n");
-	removeodd(head, num);
+	printf("총 노드의 개수는%d입니다\n", nodeNum(head));
+	reverse(head);
+	midNum(head);
+	printf("입력순 출력\n");
+	print(head);
+	head = odddlt(head);
+	printf("삭제후 출력\n");
+	print(head);
+
+	return 0;
 }
