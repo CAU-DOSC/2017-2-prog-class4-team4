@@ -1,3 +1,5 @@
+#include "linkedlist.h"
+
 LINK createNode(int n)
 {
 	LINK cur = (LINK)malloc(sizeof(NODE));

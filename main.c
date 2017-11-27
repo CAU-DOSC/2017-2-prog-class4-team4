@@ -1,13 +1,5 @@
 #include "linkedlist.h"
 
-LINK createNode(int value);
-LINK append(LINK head, LINK cur);
-int printlist(LINK head);
-int printback(LINK head, int cnt);
-int centerprint(LINK head, int cnt);
-LINK removeodd(LINK head, int cnt);
-
-
 int main()
 {
 	int value = 0, num = 0;
