@@ -8,6 +8,7 @@ LINK createNode(int n)
 
 	return cur;
 }
+
 LINK append(LINK head, LINK cur)
 {
 	LINK nextNode = head;
@@ -23,6 +24,7 @@ LINK append(LINK head, LINK cur)
 	nextNode->next = cur;
 	return head;
 }
+
 int nodeNum(LINK head)
 {
 	int cnt = 0;
@@ -34,6 +36,7 @@ int nodeNum(LINK head)
 	}
 	return cnt;
 }
+
 void reverse(LINK head)
 {
 	printf("역순출력:");
@@ -72,6 +75,7 @@ void reverse(LINK head)
 	}
 	head = b;
 }
+
 void midNum(LINK head)
 {
 	int cnt = 0;
@@ -105,6 +109,7 @@ void midNum(LINK head)
 	}
 	printf("\n");
 }
+
 void print(LINK head)
 {
 	LINK nextNode = head;
