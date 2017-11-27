@@ -1,19 +1,18 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-#define _CRT_SECURE_NO_WARNINGS
-
-struct linked_list
-{
-	int n;
+typedef struct linked_list{
+	int value;
 	struct linked_list *next;
-};
-typedef struct linked_list NODE;
-typedef NODE *LINK;
+}NODE;
+typedef NODE* LINK;
 
-LINK createNode(int value);
+LINK createNode(int *value);
 LINK append(LINK head, LINK cur);
-LINK removeodd(LINK head, int cnt);
-int printlist(LINK head);
-int printback(LINK head, int cnt);
-int centerprint(LINK head, int cnt);
+int nodeNum(LINK head);
+void reverse(LINK head)
+void midNum(LINK head);
+void print(LINK head);
+LINK odddlt(LINK head);
