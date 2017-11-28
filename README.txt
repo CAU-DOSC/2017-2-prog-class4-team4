@@ -8,6 +8,9 @@ This text file describes brief but precise and complete specification of project
 - - -
 Your description start form next line and do not delete lines upto this point.
 
+<목표>
+입력된 여러 개의 정수를 연결리스트를 사용하여 다양한 방법으로 저장된 값을 출력한다.
+
 <프로젝트 요약>
 
  1. 정수값을 입력 받는다(CTRL-Z 가 입력될 때까지 입력받음)
@@ -21,14 +24,11 @@ Your description start form next line and do not delete lines upto this point.
 
 < ownership >
 
-readme - 이찬영
-header - 박소현
-main - 유승훈
-library - 김병주, 최승원
-<<<<<<< HEAD
+readme - 이찬영(chan0139)
+header - 박소현(carriesue)
+main - 유승훈(ysh4296)
+library - 김병주(superbottlegod), 최승원(seung1)
 
-< fuction descriptions >
-=======
 
 < fuction descriptions >
 
@@ -120,6 +120,3 @@ output parameter : head
 
 main에 사용할 함수 선언 - createNode, append, nodeNum, reverse, midNum, print, oddlt
 
-< Team's brief idea >
-
-- 
