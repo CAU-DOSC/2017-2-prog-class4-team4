@@ -3,7 +3,7 @@ void *jug(int d, int num, char *vector, int gcd)
 {
 	int temp;
 	int count = gcd;
-	while (count<=d)
+	while (count <= d)
 	{
 		for (int i = 0; i < gcd; i++)
 		{
@@ -22,6 +22,7 @@ void *jug(int d, int num, char *vector, int gcd)
 	{
 		printf("%c", vector[i]);
 	}
+	printf("\n");
 }
 int gcd(int num, int d)
 {
