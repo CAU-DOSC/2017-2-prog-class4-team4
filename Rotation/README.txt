@@ -14,36 +14,41 @@ Your description start form next line and do not delete lines upto this point.
 - trivial solution, juggling / block-swap / reverse 4가지 방법으로 구분
 - String length와 rotate distance에 따른 수행시간의 차이를 비교 출력
 
-
 <역할 분담>
 
 - main : 김병주
-- trivial sol : 이찬영
+- trivial solution : 이찬영
 - juggling : 유승훈
 - blockswap : 최승원
 - reverse : 박소현
 
+
 < fuction descriptions >
 
-name : BS
-input parameter :
-output parameter :
+name : trivial
+input parameter : char *str, int n, int d
+output parameter : void
 
-name : Swap
-input parameter :
-output parameter :
+name : jug
+input parameter : int d, int num, char *vector, int gcd
+output parameter : void
+
+name : BS
+input parameter : int Length, int D, char *str
+output parameter : void
+
+name : swap
+input parameter : int a, int z, int sD, char *str
+output parameter : void
 
 name : Rev
-input parameter :
-output parameter :
+input parameter : int Length, int D, char *str
+output parameter : void
 
 name : reverse
-input parameter :
-output parameter :
+input parameter : int start, int end, char *str
+output parameter : void
 
-name : trivial
-input parameter :
-output parameter :
 
 < Declaration of important data and data types in user header file>
 
