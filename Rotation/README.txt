@@ -14,7 +14,6 @@ Your description start form next line and do not delete lines upto this point.
 - trivial solution, juggling / block-swap / reverse 4가지 방법으로 구분
 - String length와 rotate distance에 따른 수행시간의 차이를 비교 출력
 
-
 <역할 분담>
 
 - main : 김병주
