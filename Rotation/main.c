@@ -17,36 +17,36 @@ int main()
 	
 	strcpy(rotate, vector);
 	start1 = clock();
-	printf("Trivial Solution : ");
+	printf("\nTrivial Solution : ");
 	trivial(rotate, length, rot);
 	end1 = clock();
 	puts(rotate);
 	
 	strcpy(rotate, vector);
 	start2 = clock();
-	printf("Reverse : ");
+	printf("Reverse          : ");
 	Rev(length, rot, rotate);
 	end2 = clock();
 	puts(rotate);
 
 	strcpy(rotate, vector);
 	start3 = clock();
-	printf("Jugging : ");
+	printf("Jugging          : ");
 	jug(rot, length, rotate, G);
 	end3 = clock();
 	puts(rotate);
 
 	strcpy(rotate, vector);
 	start4 = clock();
-	printf("Block - Swap : ");
+	printf("Block - Swap     : ");
 	BS(length, rot, rotate);
 	end4 = clock();
 	puts(rotate);
 
-	printf("Trivial Solution Running Time : %fms", (double)(end1 - start1));
-	printf("\nReverse함수 Running Time : %fms", (double)(end2 - start2));
-	printf("\nJugging함수 Running Time : %fms\n", (double)(end3 - start3));
-	printf("Block - Swap Running Time : %fms", (double)(end4 - start4)); 
+	printf("\nTrivial Solution Running Time : %fms", (double)(end1 - start1));
+	printf("\nReverse함수 Running Time      : %fms", (double)(end2 - start2));
+	printf("\nJugging함수 Running Time      : %fms", (double)(end3 - start3));
+	printf("\nBlock - Swap Running Time     : %fms", (double)(end4 - start4)); 
 	return 0;
 
 }
