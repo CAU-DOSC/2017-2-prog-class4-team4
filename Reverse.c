@@ -1,3 +1,4 @@
+#include "header.h"
 
 void Rev(int Length, int D, char* Str)   //Reverse하는 함수
 {

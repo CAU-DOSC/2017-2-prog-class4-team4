@@ -3,8 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct linked_list{
-	int value;
-	struct linked_list *next;
-}NODE;
-typedef NODE* LINK;
+void BS(int Length, int D, char* Str);
+void Swap(int a, int z, int sD, char* Str);
+void Rev(int Length, int D, char* Str);
+void reverse(int start, int end, char* Str);
