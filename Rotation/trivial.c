@@ -29,9 +29,4 @@ void *trivial(char *str, int n, int d)
 			str[0] = temp;
 		}
 	}
-	for (int i = 0; i < n; i++)
-	{
-		printf("%c", str[i]);
-	}
-	printf("\n");
 }

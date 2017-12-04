@@ -18,11 +18,6 @@ void *jug(int d, int num, char *vector, int gcd)
 		}
 		count = count + gcd;
 	}
-	for (int i = 0; i < num; i++)
-	{
-		printf("%c", vector[i]);
-	}
-	printf("\n");
 }
 int gcd(int num, int d)
 {
