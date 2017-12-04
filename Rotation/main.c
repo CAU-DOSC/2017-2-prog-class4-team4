@@ -7,16 +7,15 @@ int main()
 	int length, rot, G = 0;
 	printf("Enter the String distance and Rotate distance : ");
 	scanf("%d %d", &length, &rot);
+	if (rot < 0)
+		rot = length + rot;
 	G = gcd(length, rot);
 	vector = (char *)malloc(sizeof(char)*(length * 2));
 	rotate = (char *)malloc(sizeof(char)*(length * 2));
 	printf("Enter the String : ");
 	scanf("%s", vector);
-	for (int i = 0; i < length; i++)
-	{
-		rotate[i] = vector[i];
-	} //문자열 저장
-
+	
+	strcpy(rotate, vector);
 	start1 = clock();
 	printf("Trivial Solution : ");
 	trivial(rotate, length, rot);
