@@ -1,6 +1,6 @@
 #include "header.h"
 
-char *trivial(char *str, int n, int d)
+void *trivial(char *str, int n, int d)
 {
 	char temp = 0;
 
