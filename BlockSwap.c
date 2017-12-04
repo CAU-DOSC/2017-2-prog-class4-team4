@@ -21,7 +21,7 @@ void BS(int Length, int D, char* Str)      //BlockSwap
 	}
 	Swap(A, Z, R, Str);                    //좌 우 길이가 같을때 마지막으로 swap해주고 마침
 }
-void Swap(int a, int z, int sD, char* Str) //Str에서 a위치부터 z위치까지 sD만큼 이동
+void Swap(int a, int z, int sD, char* Str) //Str[a]~Str[z]중에서 앞뒤에서 각각 sD만큼 바꿔주는 함수
 {
 	char temp = NULL;
 	for (int i = 0; i < sD; i++)
