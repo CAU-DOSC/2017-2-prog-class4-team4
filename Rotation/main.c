@@ -11,6 +11,7 @@ int main()
 	scanf_s("%d %d", &length, &rot);
 	if (rot < 0)
 		rot = length + rot;
+	length = length - rot;
 	G = gcd(length, rot);
 	vector = (char *)malloc(sizeof(char)*(length * 2));
 	rotate = (char *)malloc(sizeof(char)*(length * 2));
