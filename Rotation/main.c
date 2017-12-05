@@ -24,29 +24,29 @@ int main()
 	printf("\n");
 
 	strcpy(rotate, vector);
-	start1 = clock();
 	printf("\nTrivial Solution : ");
+	start1 = clock();
 	trivial(rotate, length, rot);
 	end1 = clock();
 	puts(rotate);
 
 	strcpy(rotate, vector);
-	start2 = clock();
 	printf("Reverse          : ");
+	start2 = clock();
 	Rev(length, rot, rotate);
 	end2 = clock();
 	puts(rotate);
 
 	strcpy(rotate, vector);
-	start3 = clock();
 	printf("Jugging          : ");
+	start3 = clock();
 	jug(rot, length, rotate, G);
 	end3 = clock();
 	puts(rotate);
 
 	strcpy(rotate, vector);
-	start4 = clock();
 	printf("Block - Swap     : ");
+	start4 = clock();
 	BS(length, rot, rotate);
 	end4 = clock();
 	puts(rotate);
