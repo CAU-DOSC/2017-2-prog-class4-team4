@@ -11,6 +11,7 @@ int main()
 	scanf_s("%d %d", &length, &rot);
 	if (rot < 0)
 		rot = length + rot;
+	length = length - rot;
 	G = gcd(length, rot);
 	vector = (char *)malloc(sizeof(char)*(length * 2));
 	rotate = (char *)malloc(sizeof(char)*(length * 2));
@@ -51,8 +52,8 @@ int main()
 	puts(rotate);
 
 	printf("\nTrivial Solution Running Time : %fms", (double)(end1 - start1));
-	printf("\nReverseÇÔ¼ö Running Time      : %fms", (double)(end2 - start2));
-	printf("\nJuggingÇÔ¼ö Running Time      : %fms", (double)(end3 - start3));
+	printf("\nReverse Running Time      : %fms", (double)(end2 - start2));
+	printf("\nJugging Running Time      : %fms", (double)(end3 - start3));
 	printf("\nBlock - Swap Running Time     : %fms", (double)(end4 - start4));
 	return 0;
 	
