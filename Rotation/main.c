@@ -1,4 +1,6 @@
-#include "header.h"
+﻿#include "header.h"
+
+void gendata(char* CharArrayOfLength, int N);
 
 int main()
 {
@@ -6,22 +8,27 @@ int main()
 	char *vector, *rotate;
 	int length, rot, G = 0;
 	printf("Enter the String distance and Rotate distance : ");
-	scanf("%d %d", &length, &rot);
+	scanf_s("%d %d", &length, &rot);
 	if (rot < 0)
 		rot = length + rot;
 	G = gcd(length, rot);
 	vector = (char *)malloc(sizeof(char)*(length * 2));
 	rotate = (char *)malloc(sizeof(char)*(length * 2));
-	printf("Enter the String : ");
-	scanf("%s", vector);
-	
+	gendata(vector, length);
+	printf("랜덤으로 받은 문자열 : ");
+	for (int i = 0; i < length; i++)
+	{
+		printf("%c", vector[i]);
+	}
+	printf("\n");
+
 	strcpy(rotate, vector);
 	start1 = clock();
 	printf("\nTrivial Solution : ");
 	trivial(rotate, length, rot);
 	end1 = clock();
 	puts(rotate);
-	
+
 	strcpy(rotate, vector);
 	start2 = clock();
 	printf("Reverse          : ");
@@ -44,9 +51,17 @@ int main()
 	puts(rotate);
 
 	printf("\nTrivial Solution Running Time : %fms", (double)(end1 - start1));
-	printf("\nReverse�Լ� Running Time      : %fms", (double)(end2 - start2));
-	printf("\nJugging�Լ� Running Time      : %fms", (double)(end3 - start3));
-	printf("\nBlock - Swap Running Time     : %fms", (double)(end4 - start4)); 
+	printf("\nReverseÇÔ¼ö Running Time      : %fms", (double)(end2 - start2));
+	printf("\nJuggingÇÔ¼ö Running Time      : %fms", (double)(end3 - start3));
+	printf("\nBlock - Swap Running Time     : %fms", (double)(end4 - start4));
 	return 0;
+	
+}
 
+void gendata(char* CharArrayOfLength, int N)
+{
+	srand(time(NULL));
+	for (int i = 0; i < N; i++)
+		CharArrayOfLength[i] = (rand() % 26 + 'A');
+	CharArrayOfLength[N] = NULL;
 }
