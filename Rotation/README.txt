@@ -55,3 +55,13 @@ output parameter : void
 - 파일명 : header.h
 - 사용된 헤더파일 : <stdio.h>, <stdlib.h>, <string.h>, <math.h> <time.h>
 - main에 사용할 함수 선언 : BS, Swap, Rev, reverse, trivial
+
+< 실행 결과 >
+
+String distance Rotate distance Trivial      Reverse    Juggling   BS
+
+100		3		0.000000ms   0.000000ms 0.000000ms 0.000000ms
+1000            10              2.000000ms   0.000000ms 0.000000ms 0.000000ms
+10000		3000 		160.000000ms 0.000000ms 0.000000ms 0.000000ms
+100000          1000            390.000000ms 0.000000ms 1.000000ms 0.000000ms
+1000000		10000		26554.0000ms 4.000000ms 3.000000ms 4.000000ms
